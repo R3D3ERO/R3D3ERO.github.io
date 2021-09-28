@@ -1,0 +1,86 @@
+<doctype html>
+<html  lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>If Else</title>
+
+<style>
+body{
+	background-color:lightslategray ;
+
+}
+
+
+</style>
+<script>
+	function changemood() {
+		
+		var button = document.getElementById('ring');
+		var value = button.value; 
+		 text = '';
+		if (value =='0') {
+		document.getElementById('moodtext').innerHTML="You are a combo player, you like to summon monsters in quick succession to make a omni negate board";
+		document.body.style.backgroundColor ="crimson"; 
+		text = 'You are a combo player, you like to summon monsters in quick succession to make a omni negate board';
+		button.value = 0;
+	}
+}
+	function changemood2() {
+		
+		var button = document.getElementById('bing');
+		var value = button.value; 
+		 text = '';
+		if (value =='1') {
+		document.getElementById('moodtext').innerHTML="You are a control player, you like to slow the game down through floodgate cards";
+		document.body.style.backgroundColor ="Blue"; 
+		text = 'You are a control player, you like to slow the game down through floodgate cards';
+		button.value = 1;
+	}
+}
+
+function changemood3() {
+		
+		var button = document.getElementById('ding');
+		var value = button.value; 
+		 text = '';
+		if (value =='2') {
+		document.getElementById('moodtext').innerHTML="'You are a mid range player, you can slow down the game or speed it up'";
+		document.body.style.backgroundColor ="purple"; 
+		text = 'You are a mid range player, you can slow down the game or speed it up';
+		button.value = 2;
+	}
+}
+
+function changemood4() {
+		
+		var button = document.getElementById('sing');
+		var value = button.value; 
+		 text = '';
+		if (value =='3') {
+		document.getElementById('moodtext').innerHTML="'You are a mystic mine player, you are the worst kind of player imaginable'";
+		document.body.style.backgroundColor ="yellow"; 
+		text = 'You are a mid range player, you can slow down the game or speed it up';
+		button.value = 3;
+	}
+}
+	
+</script>
+</head> 
+
+
+<body>
+<h1>My Mood</h1>
+<p>your mood will determine your deck type </p>
+<button id="ring" value='0' onclick="changemood(0)">Angry</button>
+<button id="bing" value='1' onclick="changemood2(1)">Sad</button>
+<button id="ding" value='2' onclick="changemood3(2)">Stoic</button>
+<button id="sing" value='3' onclick="changemood4(3)">Crazy</button>
+
+
+
+<p id="moodtext"></p>
+
+</body>
+
+</html> 
