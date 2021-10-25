@@ -1,0 +1,114 @@
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body
+{
+	background-image: url("images/space.jpg");
+	background-repeat: no-repeat;
+}/* CSS for background Image*/
+
+header {
+	background: white;
+	padding: 20px;
+}
+
+header > h1 {
+	color: #25272E;
+	text-align: center;
+	font-family: Arial, sans-serif;
+} /*CSS for RPS Title*/
+
+
+.ScoreBoard {
+ margin: 25px auto;
+ border: 5px solid white;
+ border-radius: 5px;
+ text-align: center;
+ width: 300px;
+color: white;
+font-size: 50px;
+padding: 20px 30px;
+font-family:Arial, sans-serif;
+position: relative;
+} /* Css for the Score Tracker*/
+
+
+
+.badge {
+	background: orangered;
+	color: white;
+	font-size: 20px;
+	padding:4px 12px ;
+	font-family: Arial, sans-serif;
+}/* CSS for player names*/
+
+
+#user-label {
+	position: absolute;
+	top: 30px;
+	left: -30px;
+
+}/* CSS for Name of Player User*/
+
+
+#comp-label {
+	position: absolute;
+	top: 30px;
+	right: -30px;
+
+}/* CSS for Name of AI player*/
+
+
+.results {
+	font-size: 50px;
+	color: white;
+}/* CSS for Score Numbers*/
+
+
+.results > p {
+	text-align: center;
+	font-weight: bold;
+	font-family: Arial,sans-serif;
+
+} /* CSS for Result Screen*/
+
+
+
+
+
+
+
+
+
+.options{
+	margin-top: 150px 0;
+	text-align: center;
+}
+
+.option {
+	margin: 0 15px;
+	padding: 25px;
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+
+.option:hover {
+	cursor: pointer;
+	transform: scale(1.1)
+	background: red;
+}
+
+#choice-prompt
+{
+	text-align: center;
+	color: white;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 50px;
+	margin-top: 30px;
+}
+
+
