@@ -13,23 +13,25 @@ const CARD_VALUE_MAP = {
 	"J": 11,
 	"Q": 12,
 	"K": 13,
+	 "A":14,
 }
 
 const comCardSlot = document.querySelector(".com-card-slot")
-const CardSlot = document.querySelector(".player-card-slot")
-const comDeckElement = document.querySelector('.com-deck')
-const playerDeckElement = document.querySelector('.player-Deck')
-const text = document.querySelector('.text')
+const playerCardSlot = document.querySelector(".player-card-slot")
+const comDeckElement = document.querySelector(".com-deck")
+const playerDeckElement = document.querySelector(".player-Deck")
+const text = document.querySelector(".text")
 
 
 let playerDeck, comDeck, inRound, stop
 
 
 document.addEventListener ('click',() =>) {
- if(stop){
+ if(stop) {
  	startGame()
  	return
- }
+       }
+
  if(inRound) {
  	cleanBeforeRound ()
  } else {
@@ -44,9 +46,9 @@ function startGame(){
 
 
 
-const deckMid = math.ceil(deck.numberOfCards / 2)
+const deckMid = Math.ceil(deck.numberOfCards / 2)
 playerDeck = new Deck(deck.cards.slice(0,deckMid))
-comdeck = new deck (deck.cards.slice(deckMid,deck.numberOfCards))
+comDeck = new Deck (deck.cards.slice(deckMid,deck.numberOfCards))
 inRound = false
 stop = false
 
@@ -55,22 +57,23 @@ cleanBeforeRound()
 
 function cleanBeforeRound() {
 	inRound = false
-	comCardSlot.innerHTML = ''
-	playerCardSlot.innerHTML =''
-	text.innerText = ''
+	comCardSlot.innerHTML = ""
+	playerCardSlot.innerHTML =""
+	text.innerText = ""
 
 	updateDeckCount ()
 
 }
 
-function flipcards (){
+function flipcards () {
 	inRound = true
-	const playerCard= playerDeck.pop()
+	const playerCard = playerDeck.pop()
 	const comCard= comDeck.pop()
-	playerCardSlot.appendChild(playerCard.html())
+	playerCardSlot.appendChild(playerCard.getHTML())
 	comCardSlot.appendChild(comCard.getHTML())
 
 	updateDeckCount()
+	
 	if (isRoundWinner(playerCard, comCard)) {
 		text.innerText="win"
 		playerDeck.push(playerCard)
@@ -106,8 +109,3 @@ function isRoundWinner ( cardOne, cardTwo) {
 function isGameOver (deck) {
 	return deck.numberOfCards === 0
 }
-
-console.log(playerDeck)
-console.log(computer deck)
-
-computerCardSlot.appendChild(deck.cards[0].getHTML())
